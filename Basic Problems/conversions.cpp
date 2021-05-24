@@ -60,50 +60,47 @@ int hexadecimalToDecimal()
    return res;
 }
 
-// int decimalToBinary()
-// {
-//    int n;
-//    cin >> n;
-//    int res = 0;
-//    bool flag  = 1;
-//    if (n%2 == 0 ){
-//       flag = 0;
-//    }
-//    while (n > 0)
-//    {
-//       int rem = n % 2;
-//       res = res * 10 + rem;
-//       cout<<"res : "<<res<<endl;
-//       n /= 2;
-//       cout<<"n : "<<n<<endl;                                                                     
-//    }
-//    if (flag==0){
-//       res *=10;
-//    }
-//    return res;
-// }
-
-string decimalToBinary(){
-   string n;
+int decimalToBinary()
+{
+   int n;
    cin>>n;
-   string res="";
-   stringstream ss;
 
-   for (int i = n.size()-1; i>=0;i--){
-      int last = n[i] - '0';
-      int rem = last %2;
-      // res += char((n[i]-'0')%2);
-      ss<<res<<char(rem);
-      ss>>res;
+   int x = 1;
+   int ans = 0;
+   while(x<=n){
+      x*=2;
    }
-   return res;
+   x/=2;
+
+   while(x>0){
+      int binaryLastDigit = n/x; //either 0 or 1 always
+      n -= x * binaryLastDigit;
+      x/=2;
+      ans = ans *10 + binaryLastDigit;
+   }
+   return ans;
 }
+
+// void decimalToBinary(){
+//    int n;
+//    cin>>n;
+//    int binaryNum[32];
+//    int i = 0;
+//    while(n>0){
+//       binaryNum[i] = n%2;
+//       i++;
+//       n /= 2;
+//    }
+//    for(int j = i-1; j>=0; j-- ){
+//       cout<<binaryNum[j];
+//    }
+// }
 
 int main()
 {
    // cout<<binaryToDecimal()<<endl;
    // cout << octalToDecimal() << endl;
    // cout << hexadecimalToDecimal() << endl;
-   cout << decimalToBinary() << endl;
+   cout<<decimalToBinary()<<endl;
    return 0;
 }
