@@ -63,20 +63,22 @@ int hexadecimalToDecimal()
 int decimalToBinary()
 {
    int n;
-   cin>>n;
+   cin >> n;
 
    int x = 1;
    int ans = 0;
-   while(x<=n){
-      x*=2;
+   while (x <= n)
+   {
+      x *= 2;
    }
-   x/=2;
+   x /= 2;
 
-   while(x>0){
-      int binaryLastDigit = n/x; //either 0 or 1 always
+   while (x > 0)
+   {
+      int binaryLastDigit = n / x; //either 0 or 1 always
       n -= x * binaryLastDigit;
-      x/=2;
-      ans = ans *10 + binaryLastDigit;
+      x /= 2;
+      ans = ans * 10 + binaryLastDigit;
    }
    return ans;
 }
@@ -96,11 +98,64 @@ int decimalToBinary()
 //    }
 // }
 
+int decimalToOctal()
+{
+   int n;
+   cin >> n;
+
+   int x = 1;
+   int ans = 0;
+
+   while (x <= n)
+   {
+      x *= 8;
+   }
+   x /= 8;
+
+   while (x > 0)
+   {
+      int binaryLastDigit = n / x;
+      n -= x * binaryLastDigit;
+      x /= 8;
+      ans = ans * 10 + binaryLastDigit;
+   }
+   return ans;
+}
+
+string decimalToHexadecimal(){
+   int n;
+   cin>>n;
+
+   int x = 1; //base
+   string ans = "";
+
+   while(x<=n){
+      x*=16;
+   }
+   x/=16;
+
+   while(x>0){
+      int lastDigit = n/x;
+      n-=x * lastDigit;
+      x/=16;
+      if(lastDigit <= 9){
+         ans = ans + to_string(lastDigit);
+      }
+      else{
+         char c = 'A' + lastDigit - 10;
+         ans.push_back(c);
+      }
+   }
+   return ans;
+}
+
 int main()
 {
    // cout<<binaryToDecimal()<<endl;
    // cout << octalToDecimal() << endl;
    // cout << hexadecimalToDecimal() << endl;
    cout<<decimalToBinary()<<endl;
+   // cout << decimalToOctal() << endl;
+   // cout<< decimalToHexadecimal()<<endl;
    return 0;
 }
