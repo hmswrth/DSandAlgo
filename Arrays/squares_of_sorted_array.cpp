@@ -40,6 +40,5 @@ int main()
 {
 
    sortedSquares();
-
    return 0;
 }
