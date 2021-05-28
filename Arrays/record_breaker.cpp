@@ -56,12 +56,8 @@ int main()
       if (arr[i] > mx && arr[i] > arr[i + 1])
       {
          res++;
-         mx = max(mx, arr[i]);
       }
-      else
-      {
-         mx = max(mx, arr[i]);
-      }
+      mx = max(mx, arr[i]);
    }
    cout << res << endl;
    return 0;
