@@ -9,7 +9,6 @@
 // A[] = {1,2,3,7,5}
 // Output: 2 4
 // Explanation: The sum of elements from 2nd position to 4th position is 12.
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -21,6 +20,7 @@ int main()
    for (int i = 0; i < n; i++)
    {
       cin >> arr[i];
+      // cout << "i" << arr[i] << endl;
    }
 
    int i = 0, j = 0, st = -1, en = -1, sum = 0;
@@ -38,7 +38,7 @@ int main()
    while (j < n)
    {
       sum += arr[j];
-      while (j < n && sum + arr[j] > s)
+      while (sum > s)
       {
          sum -= arr[i];
          i++;
@@ -46,8 +46,8 @@ int main()
 
       if (sum == s)
       {
-         st = i + 1;
-         en = j + 1;
+         st = i+1;
+         en = j+1;
          break;
       }
       j++;
