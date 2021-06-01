@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long int
+
 void gifts()
 {
    int n, k;
@@ -20,15 +22,14 @@ void gifts()
       else
          second += arr[i];
    }
-   if (i % 2 == 0)
-      first += arr[i] + arr[i + 1];
-   else
-      second += arr[i] + arr[i + 1];
+   second += arr[i] + arr[i + 1];
    cout << max(first, second) << endl;
 }
 
-int main()
+int32_t main()
 {
+   ios_base::sync_with_stdio(0);
+   cin.tie(0);
    int t;
    cin >> t;
    for (int i = 0; i < t; i++)
