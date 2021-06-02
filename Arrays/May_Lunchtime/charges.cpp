@@ -24,14 +24,16 @@ void charges()
       else
          s[q] = '1';
       // cout<<"q: "<<q<<"s: "<<s<<endl;
-      if(q>0){
-         if(s[q] == s[q-1])
+      if (q > 0)
+      {
+         if (s[q] == s[q - 1])
             len++;
          else
             len--;
       }
-      if(q<n-1){
-         if(s[q] == s[q+1])
+      if (q < n - 1)
+      {
+         if (s[q] == s[q + 1])
             len++;
          else
             len--;
@@ -42,6 +44,8 @@ void charges()
 
 int32_t main()
 {
+   ios_base::sync_with_stdio(0);
+   cin.tie(0);
    int t;
    cin >> t;
    for (int i = 0; i < t; i++)
