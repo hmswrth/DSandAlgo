@@ -7,6 +7,8 @@
 // Constraints
 // 1 <= N,M <= 1,000
 
+// time complexity : O(n+m)
+
 #include <bits/stdc++.h>
 using namespace std;
 
