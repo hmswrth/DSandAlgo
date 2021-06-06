@@ -1,3 +1,5 @@
+// Given a string s of latin characters, your task is to output the character which has
+// maximum frequency.
 #include <bits/stdc++.h>
 using namespace std;
 
