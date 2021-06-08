@@ -41,7 +41,7 @@ int updateBit(){
    int mask = ~(1<<pos);
    n = (n & mask);
    mask = val << pos;
-   return(n&mask);
+   return(n|mask);
 }
 
 
@@ -54,7 +54,8 @@ int main(){
       //    cout<<"SET"<<endl;
       // else 
       //    cout<<"UNSET"<<endl;
-      cout<<setBit()<<endl;
+      // cout<<setBit()<<endl;
+      cout<<clearBit()<<endl;
    }
 
    
