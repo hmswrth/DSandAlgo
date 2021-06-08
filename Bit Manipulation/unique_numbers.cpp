@@ -5,7 +5,7 @@ using namespace std;
 
 bool getBit(int n, int pos)
 {
-   return (n & (1 << pos) != 0);
+   return (n & (1 << pos));
 }
 
 void uniqueNums()
