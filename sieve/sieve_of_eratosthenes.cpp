@@ -1,3 +1,9 @@
+/* 
+Algorithm: We start from 2, and on each encounter of a prime number, we mark
+its multiples as composite.
+Time Complexity: O(n log log n)
+Space Complexity: O(n) 
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
