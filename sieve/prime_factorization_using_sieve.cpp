@@ -33,7 +33,6 @@ void pfsieve(int n)
          }
       }
    }
-
    while (n != 1)
    {
       cout << spf[n] << " ";

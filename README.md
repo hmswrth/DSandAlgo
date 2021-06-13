@@ -1,1 +1,1 @@
-# DSandAlgo
+# DSandAlgo - All the required essentials
