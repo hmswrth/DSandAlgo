@@ -1,4 +1,5 @@
 /* 
+Prime Factors [1,n]
 while( num ! = 1 ):
 
 We keep on dividing it with its smallest prime factor.

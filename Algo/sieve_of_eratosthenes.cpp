@@ -1,4 +1,5 @@
 /* 
+Find prime numbers within a range
 Algorithm: We start from 2, and on each encounter of a prime number, we mark
 its multiples as composite.
 Time Complexity: O(n log log n)
