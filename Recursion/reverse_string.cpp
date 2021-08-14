@@ -13,9 +13,18 @@ void reverse(string s, int n){
    }
 }
 
+void reverse_string(string s){
+   if(s.length() == 0){
+      return ;
+   }
+   reverse_string(s.substr(1));
+   cout<<s[0];
+}
+
 int main(){
    string s;
    cin>>s;
-   reverse(s,s.length());
+   // reverse(s,s.length());
+   reverse_string(s);
    return 0;
 }
